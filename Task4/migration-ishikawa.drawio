@@ -1,0 +1,331 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="medikamente-mvp-context" name="C4 Context — MVP">
+    <mxGraphModel dx="2475" dy="1329" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1460" pageHeight="1130" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-83" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=25;fontColor=#263445;fontStyle=1;fillColor=none;strokeColor=none;spacing=8;shadow=0;rounded=0;" value="«Медикаменте» — узкие места при миграции" vertex="1">
+          <mxGeometry height="42" width="1580" x="980.3913043478265" y="763.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-84" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fontStyle=0;fillColor=none;strokeColor=none;spacing=8;shadow=0;rounded=0;" value="Переход от Excel, сканов, файловой 1С и общего сервера. Целевой рост — 5× объёма данных.&amp;nbsp;" vertex="1">
+          <mxGeometry height="32" width="1580" x="980.3913043478265" y="809.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-85" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeWidth=3;strokeColor=#476884;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="985.3913043478265" y="1155.9275362318845" as="sourcePoint" />
+            <mxPoint x="2320.3913043478265" y="1155.9275362318845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-86" parent="1" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=15;fontColor=#263445;fontStyle=1;fillColor=#fff2cc;strokeColor=#b89234;spacing=8;shadow=0;rounded=1;" value="Результат рисков&lt;br&gt;&lt;br&gt;Медленная запись,&lt;br&gt;задержки платежей&lt;br&gt;и сбои при росте нагрузки" vertex="1">
+          <mxGeometry height="154" width="240" x="2320.3913043478265" y="1078.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-87" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=15;fontColor=#263445;fontStyle=1;fillColor=#dae8f2;strokeColor=#7e9ab1;spacing=8;shadow=0;rounded=1;" value="Инфраструктура" vertex="1">
+          <mxGeometry height="38" width="350" x="1000.3913043478265" y="850.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-88" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;startArrow=none;endArrow=none;endFill=1;strokeWidth=2;strokeColor=#7a8fa1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1350.3913043478265" y="890.9275362318845" as="sourcePoint" />
+            <mxPoint x="1430.3913043478265" y="1155.9275362318845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-89" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;startArrow=none;endArrow=none;endFill=1;strokeWidth=1.5;strokeColor=#7a8fa1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1020.3913043478265" y="950.9275362318845" as="sourcePoint" />
+            <mxPoint x="1368.5045118949963" y="950.9275362318845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-90" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fontStyle=0;fillColor=none;strokeColor=none;spacing=8;shadow=0;rounded=0;" value="Общий сервер файлов, 1С и приложений&lt;br&gt;→ конкуренция за диск." vertex="1">
+          <mxGeometry height="48" width="340" x="1000.3913043478265" y="899.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-91" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;startArrow=none;endArrow=none;endFill=1;strokeWidth=1.5;strokeColor=#7a8fa1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1020.3913043478265" y="1020.9275362318845" as="sourcePoint" />
+            <mxPoint x="1389.6365873666944" y="1020.9275362318845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-92" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fontStyle=0;fillColor=none;strokeColor=none;spacing=8;shadow=0;rounded=0;" value="Старая и новая системы одновременно&lt;br&gt;→ нехватка CPU и памяти." vertex="1">
+          <mxGeometry height="48" width="340" x="1000.3913043478265" y="969.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-93" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;startArrow=none;endArrow=none;endFill=1;strokeWidth=1.5;strokeColor=#7a8fa1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1020.3913043478265" y="1090.9275362318845" as="sourcePoint" />
+            <mxPoint x="1410.7686628383926" y="1090.9275362318845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-94" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fontStyle=0;fillColor=none;strokeColor=none;spacing=8;shadow=0;rounded=0;" value="Файловый доступ из новых филиалов&lt;br&gt;→ зависимость от задержек сети." vertex="1">
+          <mxGeometry height="48" width="340" x="1000.3913043478265" y="1039.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-95" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=15;fontColor=#263445;fontStyle=1;fillColor=#dae8f2;strokeColor=#7e9ab1;spacing=8;shadow=0;rounded=1;" value="Программное обеспечение" vertex="1">
+          <mxGeometry height="38" width="350" x="1420.3913043478265" y="850.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-96" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;startArrow=none;endArrow=none;endFill=1;strokeWidth=2;strokeColor=#7a8fa1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1770.3913043478265" y="890.9275362318845" as="sourcePoint" />
+            <mxPoint x="1850.3913043478265" y="1155.9275362318845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-97" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;startArrow=none;endArrow=none;endFill=1;strokeWidth=1.5;strokeColor=#7a8fa1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1440.3913043478265" y="950.9275362318845" as="sourcePoint" />
+            <mxPoint x="1788.5045118949963" y="950.9275362318845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-98" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fontStyle=0;fillColor=none;strokeColor=none;spacing=8;shadow=0;rounded=0;" value="Файловая 1С при параллельной работе&lt;br&gt;→ блокировки и ожидание." vertex="1">
+          <mxGeometry height="48" width="340" x="1420.3913043478265" y="899.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-99" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;startArrow=none;endArrow=none;endFill=1;strokeWidth=1.5;strokeColor=#7a8fa1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1440.3913043478265" y="1020.9275362318845" as="sourcePoint" />
+            <mxPoint x="1809.6365873666944" y="1020.9275362318845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-100" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fontStyle=0;fillColor=none;strokeColor=none;spacing=8;shadow=0;rounded=0;" value="Медленные запросы и нехватка индексов&lt;br&gt;→ задержки новых API." vertex="1">
+          <mxGeometry height="48" width="340" x="1420.3913043478265" y="969.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-101" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;startArrow=none;endArrow=none;endFill=1;strokeWidth=1.5;strokeColor=#7a8fa1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1440.3913043478265" y="1090.9275362318845" as="sourcePoint" />
+            <mxPoint x="1830.7686628383926" y="1090.9275362318845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-102" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fontStyle=0;fillColor=none;strokeColor=none;spacing=8;shadow=0;rounded=0;" value="Длинные цепочки сервисов, прав и аудита&lt;br&gt;→ рост времени ответа." vertex="1">
+          <mxGeometry height="48" width="340" x="1420.3913043478265" y="1039.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-103" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=15;fontColor=#263445;fontStyle=1;fillColor=#dae8f2;strokeColor=#7e9ab1;spacing=8;shadow=0;rounded=1;" value="Интеграции" vertex="1">
+          <mxGeometry height="38" width="350" x="1840.3913043478265" y="850.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-104" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;startArrow=none;endArrow=none;endFill=1;strokeWidth=2;strokeColor=#7a8fa1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2190.3913043478265" y="890.9275362318845" as="sourcePoint" />
+            <mxPoint x="2270.3913043478265" y="1155.9275362318845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-105" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;startArrow=none;endArrow=none;endFill=1;strokeWidth=1.5;strokeColor=#7a8fa1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1860.3913043478265" y="950.9275362318845" as="sourcePoint" />
+            <mxPoint x="2208.5045118949965" y="950.9275362318845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-106" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fontStyle=0;fillColor=none;strokeColor=none;spacing=8;shadow=0;rounded=0;" value="ККМ и 1С связаны через OLE&lt;br&gt;→ риск сбоев совместимости." vertex="1">
+          <mxGeometry height="48" width="340" x="1840.3913043478265" y="899.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-107" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;startArrow=none;endArrow=none;endFill=1;strokeWidth=1.5;strokeColor=#7a8fa1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1860.3913043478265" y="1020.9275362318845" as="sourcePoint" />
+            <mxPoint x="2229.6365873666946" y="1020.9275362318845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-108" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fontStyle=0;fillColor=none;strokeColor=none;spacing=8;shadow=0;rounded=0;" value="Будущие внешние API в синхронной цепочке&lt;br&gt;→ ожидание партнёра и тайм-ауты." vertex="1">
+          <mxGeometry height="48" width="340" x="1840.3913043478265" y="969.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-109" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;startArrow=none;endArrow=none;endFill=1;strokeWidth=1.5;strokeColor=#7a8fa1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1860.3913043478265" y="1090.9275362318845" as="sourcePoint" />
+            <mxPoint x="2250.7686628383926" y="1090.9275362318845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-110" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fontStyle=0;fillColor=none;strokeColor=none;spacing=8;shadow=0;rounded=0;" value="Повторы операций без защиты от дублей&lt;br&gt;→ повторные записи и платежи." vertex="1">
+          <mxGeometry height="48" width="340" x="1840.3913043478265" y="1039.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-111" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;startArrow=none;endArrow=none;endFill=1;strokeWidth=2;strokeColor=#7a8fa1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1350.3913043478265" y="1425.9275362318845" as="sourcePoint" />
+            <mxPoint x="1430.3913043478265" y="1155.9275362318845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-112" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;startArrow=none;endArrow=none;endFill=1;strokeWidth=1.5;strokeColor=#7a8fa1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1020.3913043478265" y="1220.9275362318845" as="sourcePoint" />
+            <mxPoint x="1411.1320450885673" y="1220.9275362318845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-113" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fontStyle=0;fillColor=none;strokeColor=none;spacing=8;shadow=0;rounded=0;" value="Разные форматы Excel и сканов&lt;br&gt;→ долгая подготовка и загрузка." vertex="1">
+          <mxGeometry height="48" width="340" x="1000.3913043478265" y="1169.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-114" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;startArrow=none;endArrow=none;endFill=1;strokeWidth=1.5;strokeColor=#7a8fa1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1020.3913043478265" y="1290.9275362318845" as="sourcePoint" />
+            <mxPoint x="1390.3913043478265" y="1290.9275362318845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-115" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fontStyle=0;fillColor=none;strokeColor=none;spacing=8;shadow=0;rounded=0;" value="Дубли пациентов и несогласованные ID&lt;br&gt;→ ошибки связей и ручные проверки." vertex="1">
+          <mxGeometry height="48" width="340" x="1000.3913043478265" y="1239.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-116" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;startArrow=none;endArrow=none;endFill=1;strokeWidth=1.5;strokeColor=#7a8fa1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1020.3913043478265" y="1360.9275362318845" as="sourcePoint" />
+            <mxPoint x="1369.6505636070856" y="1360.9275362318845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-117" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fontStyle=0;fillColor=none;strokeColor=none;spacing=8;shadow=0;rounded=0;" value="Аналитика и импорт на рабочем хранилище&lt;br&gt;→ конкуренция с записью и оплатой." vertex="1">
+          <mxGeometry height="48" width="340" x="1000.3913043478265" y="1309.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-118" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=15;fontColor=#263445;fontStyle=1;fillColor=#e9f4ec;strokeColor=#7ca389;spacing=8;shadow=0;rounded=1;" value="Данные" vertex="1">
+          <mxGeometry height="38" width="350" x="1000.3913043478265" y="1405.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-119" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;startArrow=none;endArrow=none;endFill=1;strokeWidth=2;strokeColor=#7a8fa1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1770.3913043478265" y="1425.9275362318845" as="sourcePoint" />
+            <mxPoint x="1850.3913043478265" y="1155.9275362318845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-120" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;startArrow=none;endArrow=none;endFill=1;strokeWidth=1.5;strokeColor=#7a8fa1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1440.3913043478265" y="1220.9275362318845" as="sourcePoint" />
+            <mxPoint x="1831.1320450885673" y="1220.9275362318845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-121" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fontStyle=0;fillColor=none;strokeColor=none;spacing=8;shadow=0;rounded=0;" value="Три специалиста IT&lt;br&gt;→ нехватка времени на миграцию." vertex="1">
+          <mxGeometry height="48" width="340" x="1420.3913043478265" y="1169.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-122" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;startArrow=none;endArrow=none;endFill=1;strokeWidth=1.5;strokeColor=#7a8fa1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1440.3913043478265" y="1290.9275362318845" as="sourcePoint" />
+            <mxPoint x="1810.3913043478265" y="1290.9275362318845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-123" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fontStyle=0;fillColor=none;strokeColor=none;spacing=8;shadow=0;rounded=0;" value="Новые сервисы требуют навыков поддержки&lt;br&gt;→ риск долгой диагностики." vertex="1">
+          <mxGeometry height="48" width="340" x="1420.3913043478265" y="1239.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-124" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;startArrow=none;endArrow=none;endFill=1;strokeWidth=1.5;strokeColor=#7a8fa1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1440.3913043478265" y="1360.9275362318845" as="sourcePoint" />
+            <mxPoint x="1789.6505636070856" y="1360.9275362318845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-125" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fontStyle=0;fillColor=none;strokeColor=none;spacing=8;shadow=0;rounded=0;" value="Без обучения сотрудников новым процессам&lt;br&gt;→ ошибки ввода и обращения в IT." vertex="1">
+          <mxGeometry height="48" width="340" x="1420.3913043478265" y="1309.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-126" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=15;fontColor=#263445;fontStyle=1;fillColor=#e9f4ec;strokeColor=#7ca389;spacing=8;shadow=0;rounded=1;" value="Персонал" vertex="1">
+          <mxGeometry height="38" width="350" x="1420.3913043478265" y="1405.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-127" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;startArrow=none;endArrow=none;endFill=1;strokeWidth=2;strokeColor=#7a8fa1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2190.3913043478265" y="1425.9275362318845" as="sourcePoint" />
+            <mxPoint x="2270.3913043478265" y="1155.9275362318845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-128" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;startArrow=none;endArrow=none;endFill=1;strokeWidth=1.5;strokeColor=#7a8fa1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1860.3913043478265" y="1220.9275362318845" as="sourcePoint" />
+            <mxPoint x="2251.132045088567" y="1220.9275362318845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-129" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fontStyle=0;fillColor=none;strokeColor=none;spacing=8;shadow=0;rounded=0;" value="Одновременный переход всех процессов&lt;br&gt;→ большой простой при ошибке (Большой взрыв вместо фикус душитель)." vertex="1">
+          <mxGeometry height="48" width="340" x="1840.3913043478265" y="1169.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-130" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;startArrow=none;endArrow=none;endFill=1;strokeWidth=1.5;strokeColor=#7a8fa1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1860.3913043478265" y="1290.9275362318845" as="sourcePoint" />
+            <mxPoint x="2230.3913043478265" y="1290.9275362318845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-131" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fontStyle=0;fillColor=none;strokeColor=none;spacing=8;shadow=0;rounded=0;" value="Двойной ввод в Excel и новую систему&lt;br&gt;→ расхождения и ручная сверка." vertex="1">
+          <mxGeometry height="48" width="340" x="1840.3913043478265" y="1239.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-132" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;startArrow=none;endArrow=none;endFill=1;strokeWidth=1.5;strokeColor=#7a8fa1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1860.3913043478265" y="1360.9275362318845" as="sourcePoint" />
+            <mxPoint x="2209.650563607086" y="1360.9275362318845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-133" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fontStyle=0;fillColor=none;strokeColor=none;spacing=8;shadow=0;rounded=0;" value="Без замеров и нагрузочного тестирования&lt;br&gt;→ позднее обнаружение узких мест." vertex="1">
+          <mxGeometry height="48" width="340" x="1840.3913043478265" y="1309.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-134" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=15;fontColor=#263445;fontStyle=1;fillColor=#e9f4ec;strokeColor=#7ca389;spacing=8;shadow=0;rounded=1;" value="Процессы миграции" vertex="1">
+          <mxGeometry height="38" width="350" x="1840.3913043478265" y="1405.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-135" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=18;fontColor=#263445;fontStyle=1;fillColor=none;strokeColor=none;spacing=8;shadow=0;rounded=0;" value="Краткий отчёт: меры и приоритеты" vertex="1">
+          <mxGeometry height="32" width="860" x="980.3913043478265" y="1465.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-136" parent="1" style="html=1;whiteSpace=wrap;align=right;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fontStyle=0;fillColor=none;strokeColor=none;spacing=8;shadow=0;rounded=0;" value="P1 — до переключения. P2 — до расширения на филиалы." vertex="1">
+          <mxGeometry height="32" width="700" x="1860.3913043478265" y="1465.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-137" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fontStyle=1;fillColor=#e2e8f0;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="Категория" vertex="1">
+          <mxGeometry height="36" width="220" x="980.3913043478265" y="1505.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-138" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fontStyle=1;fillColor=#e2e8f0;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="Приоритет" vertex="1">
+          <mxGeometry height="36" width="100" x="1200.3913043478265" y="1505.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-139" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fontStyle=1;fillColor=#e2e8f0;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="Рекомендации" vertex="1">
+          <mxGeometry height="36" width="740" x="1300.3913043478265" y="1505.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-140" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fontStyle=1;fillColor=#e2e8f0;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="Как проверить" vertex="1">
+          <mxGeometry height="36" width="520" x="2040.3913043478265" y="1505.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-141" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#263445;fontStyle=0;fillColor=#f8fafc;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="Инфраструктура" vertex="1">
+          <mxGeometry height="50" width="220" x="980.3913043478265" y="1541.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-142" parent="1" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#9a3412;fontStyle=1;fillColor=#f8fafc;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="P1" vertex="1">
+          <mxGeometry height="50" width="100" x="1200.3913043478265" y="1541.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-143" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#263445;fontStyle=0;fillColor=#f8fafc;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="Замерить CPU, память, диск и сеть. Разнести рабочую нагрузку, импорт и аналитику; подготовить резерв ресурсов." vertex="1">
+          <mxGeometry height="50" width="740" x="1300.3913043478265" y="1541.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-144" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#263445;fontStyle=0;fillColor=#f8fafc;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="Прогон с 5× объёмом данных и расчётным числом пользователей: p95 времени ответа, ошибки, ресурсы." vertex="1">
+          <mxGeometry height="50" width="520" x="2040.3913043478265" y="1541.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-145" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#263445;fontStyle=0;fillColor=#ffffff;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="Данные" vertex="1">
+          <mxGeometry height="50" width="220" x="980.3913043478265" y="1591.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-146" parent="1" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#9a3412;fontStyle=1;fillColor=#ffffff;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="P1" vertex="1">
+          <mxGeometry height="50" width="100" x="1200.3913043478265" y="1591.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-147" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#263445;fontStyle=0;fillColor=#ffffff;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="Очистить форматы и дубли, согласовать ID. Выполнить пробную загрузку и сверку данных." vertex="1">
+          <mxGeometry height="50" width="740" x="1300.3913043478265" y="1591.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-148" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#263445;fontStyle=0;fillColor=#ffffff;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="Совпадают количества записей, суммы платежей и связи документов; нет потерянных медкарт." vertex="1">
+          <mxGeometry height="50" width="520" x="2040.3913043478265" y="1591.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-149" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#263445;fontStyle=0;fillColor=#f8fafc;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="Интеграции" vertex="1">
+          <mxGeometry height="50" width="220" x="980.3913043478265" y="1641.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-150" parent="1" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#9a3412;fontStyle=1;fillColor=#f8fafc;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="P1" vertex="1">
+          <mxGeometry height="50" width="100" x="1200.3913043478265" y="1641.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-151" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#263445;fontStyle=0;fillColor=#f8fafc;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="Проверить ККМ/1С. Внешний обмен отделить от записи; задать тайм-ауты, ограниченные повторы и защиту от дублей." vertex="1">
+          <mxGeometry height="50" width="740" x="1300.3913043478265" y="1641.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-152" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#263445;fontStyle=0;fillColor=#f8fafc;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="Сбой лаборатории не блокирует запись; повтор операции не создаёт второй платёж." vertex="1">
+          <mxGeometry height="50" width="520" x="2040.3913043478265" y="1641.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-153" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#263445;fontStyle=0;fillColor=#ffffff;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="Процессы миграции" vertex="1">
+          <mxGeometry height="50" width="220" x="980.3913043478265" y="1691.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-154" parent="1" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#9a3412;fontStyle=1;fillColor=#ffffff;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="P1" vertex="1">
+          <mxGeometry height="50" width="100" x="1200.3913043478265" y="1691.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-155" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#263445;fontStyle=0;fillColor=#ffffff;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="Переносить поэтапно: сначала запись. Назначить единый источник изменений; подготовить копию и откат." vertex="1">
+          <mxGeometry height="50" width="740" x="1300.3913043478265" y="1691.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-156" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#263445;fontStyle=0;fillColor=#ffffff;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="Пилот и пробный откат; нет двойного бронирования и потери платежей." vertex="1">
+          <mxGeometry height="50" width="520" x="2040.3913043478265" y="1691.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-157" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#263445;fontStyle=0;fillColor=#f8fafc;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="Программное обеспечение" vertex="1">
+          <mxGeometry height="50" width="220" x="980.3913043478265" y="1741.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-158" parent="1" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#263445;fontStyle=1;fillColor=#f8fafc;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="P2" vertex="1">
+          <mxGeometry height="50" width="100" x="1200.3913043478265" y="1741.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-159" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#263445;fontStyle=0;fillColor=#f8fafc;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="Проверить запросы, индексы и пулы соединений. Сократить цепочки вызовов, нагрузить вход и аудит без отключения защиты." vertex="1">
+          <mxGeometry height="50" width="740" x="1300.3913043478265" y="1741.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-160" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#263445;fontStyle=0;fillColor=#f8fafc;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="Сравнить p95 записи и оплаты с согласованным до запуска порогом. Критичные задержки устранить как P1." vertex="1">
+          <mxGeometry height="50" width="520" x="2040.3913043478265" y="1741.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-161" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#263445;fontStyle=0;fillColor=#ffffff;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="Персонал" vertex="1">
+          <mxGeometry height="50" width="220" x="980.3913043478265" y="1791.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-162" parent="1" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#263445;fontStyle=1;fillColor=#ffffff;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="P2" vertex="1">
+          <mxGeometry height="50" width="100" x="1200.3913043478265" y="1791.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-163" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#263445;fontStyle=0;fillColor=#ffffff;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="Назначить ответственных, обучить пользователей, подготовить инструкции и выделить поддержку. При нехватке людей — усилить IT." vertex="1">
+          <mxGeometry height="50" width="740" x="1300.3913043478265" y="1791.9275362318845" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-164" parent="1" style="html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#263445;fontStyle=0;fillColor=#ffffff;strokeColor=#cbd5e1;spacing=8;shadow=0;rounded=0;" value="Репетиция: запись, отмена, оплата, поиск данных и разбор ошибки." vertex="1">
+          <mxGeometry height="50" width="520" x="2040.3913043478265" y="1791.9275362318845" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

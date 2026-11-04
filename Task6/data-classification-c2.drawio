@@ -1,0 +1,208 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="medikamente-mvp-context" name="C4 Context — MVP">
+    <mxGraphModel dx="-34" dy="-364" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1460" pageHeight="1130" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-248" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=25;fontColor=#334155;spacing=0;strokeColor=none;fillColor=none;" value="&lt;b&gt;«Медикаменте» — классификация перед загрузкой данных&lt;/b&gt;" vertex="1">
+          <mxGeometry height="42" width="1690" x="2289.918367346939" y="1746.0408163265306" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-249" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=13;fontColor=#334155;spacing=0;strokeColor=none;fillColor=none;" value="C2: контейнеры защищённой аналитики. Данные классифицируются до загрузки в аналитическое хранилище." vertex="1">
+          <mxGeometry height="30" width="1690" x="2289.918367346939" y="1796.0408163265306" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-250" parent="1" style="rounded=0;html=1;fillColor=none;strokeColor=#94a3b8;dashed=1;dashPattern=6 4;align=left;verticalAlign=top;spacing=12;fontFamily=Helvetica;fontSize=14;fontColor=#475569;absoluteArcSize=0;movableLabel=0;" value="&lt;b&gt;Защищённая аналитика [Software System]&lt;/b&gt;" vertex="1">
+          <mxGeometry height="850" width="1110" x="2559.918367346939" y="1856.0408163265306" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-251" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fillColor=#f1f5f9;strokeColor=#94a3b8;strokeWidth=1.5;spacing=10;shadow=0;" value="&lt;b&gt;Рабочие системы и файлы&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;[Software System · внешние]&lt;/font&gt;&lt;br&gt;&lt;br&gt;Пациенты, записи, 1С, Excel, PDF.&lt;br&gt;Структуры меняются; тегов нет." vertex="1">
+          <mxGeometry height="130" width="220" x="2284.918367346939" y="1946.0408163265306" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-252" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=13;fontColor=#163d27;fillColor=#e9f4ec;strokeColor=#548564;strokeWidth=1.5;spacing=10;shadow=0;" value="&lt;b&gt;Пакетный приём&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;[Container: Python]&lt;/font&gt;&lt;br&gt;&lt;br&gt;Загрузка по расписанию.&lt;br&gt;ID пакета, хэш и источник.&lt;br&gt;Исходник — только в закрытый буфер." vertex="1">
+          <mxGeometry height="150" width="280" x="2599.918367346939" y="1921.0408163265306" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-253" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fillColor=#f1f5f9;strokeColor=#94a3b8;strokeWidth=1.5;spacing=10;shadow=0;" value="&lt;b&gt;Буфер и карантин&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;[Container: MinIO]&lt;/font&gt;&lt;br&gt;&lt;br&gt;Отдельные закрытые области.&lt;br&gt;Неизвестные данные — конфиденциальные.&lt;br&gt;Шифрование, ограниченные роли,&lt;br&gt;короткий срок хранения." vertex="1">
+          <mxGeometry height="160" width="280" x="2999.918367346939" y="1916.0408163265306" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-254" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=13;fontColor=#163d27;fillColor=#e9f4ec;strokeColor=#548564;strokeWidth=1.5;spacing=10;shadow=0;" value="&lt;b&gt;Очередь пакетов&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;[Container: PostgreSQL]&lt;/font&gt;&lt;br&gt;&lt;br&gt;ID, ссылки, хэши и статусы.&lt;br&gt;Версии схемы и правил.&lt;br&gt;Без содержимого данных пациентов." vertex="1">
+          <mxGeometry height="140" width="280" x="2599.918367346939" y="2176.0408163265306" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-255" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=13;fontColor=#ffffff;fillColor=#1168bd;strokeColor=#0b4884;strokeWidth=1.5;spacing=10;shadow=0;" value="&lt;b&gt;Классификация и подготовка&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;[Container: Python workers]&lt;/font&gt;&lt;br&gt;&lt;br&gt;Определение схемы, анализ значений,&lt;br&gt;текста и OCR сканов. Правила + NER.&lt;br&gt;Теги: PII, HEALTH, FINANCE, INTERNAL.&lt;br&gt;&lt;br&gt;Новая схема / сомнение → карантин.&lt;br&gt;Обезличивание и проверка агрегатов&lt;br&gt;перед публикацией." vertex="1">
+          <mxGeometry height="220" width="280" x="2999.918367346939" y="2176.0408163265306" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-256" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=13;fontColor=#163d27;fillColor=#e9f4ec;strokeColor=#548564;strokeWidth=1.5;spacing=10;shadow=0;" value="&lt;b&gt;Аналитическое хранилище&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;[Container: PostgreSQL]&lt;/font&gt;&lt;br&gt;&lt;br&gt;restricted: минимальные ПДн&lt;br&gt;и псевдонимы; отдельная роль&lt;br&gt;подготовки и согласованный доступ.&lt;br&gt;&lt;br&gt;marts: проверенные обезличенные&lt;br&gt;агрегаты без малых групп.&lt;br&gt;&lt;br&gt;Шифрование, GRANT/RLS, аудит;&lt;br&gt;сроки хранения по категориям." vertex="1">
+          <mxGeometry height="320" width="270" x="3399.918367346939" y="2176.0408163265306" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-257" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=13;fontColor=#163d27;fillColor=#e9f4ec;strokeColor=#548564;strokeWidth=1.5;spacing=10;shadow=0;" value="&lt;b&gt;Отчётный API / BI&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;[Container: Python]&lt;/font&gt;&lt;br&gt;&lt;br&gt;Читает только marts, только чтение.&lt;br&gt;Проверяет роль пользователя.&lt;br&gt;Не имеет прав на restricted,&lt;br&gt;буфер и карантин." vertex="1">
+          <mxGeometry height="150" width="280" x="2599.918367346939" y="2526.0408163265306" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-258" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fillColor=#f1f5f9;strokeColor=#94a3b8;strokeWidth=1.5;spacing=10;shadow=0;" value="&lt;b&gt;Каталог и политики&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;[Software System · внешний]&lt;/font&gt;&lt;br&gt;&lt;br&gt;OpenMetadata: теги и источники,&lt;br&gt;эталоны схем, версии правил,&lt;br&gt;сроки и связи преобразований.&lt;br&gt;Содержит метаданные, не медкарты." vertex="1">
+          <mxGeometry height="160" width="260" x="3699.918367346939" y="1911.0408163265306" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-259" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=13;fontColor=#ffffff;fillColor=#08427b;strokeColor=#06315b;strokeWidth=1.5;spacing=10;shadow=0;" value="&lt;b&gt;Ответственный за данные&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;[Person]&lt;/font&gt;&lt;br&gt;&lt;br&gt;Проверяет карантин;&lt;br&gt;согласует схемы и правила.&lt;br&gt;После решения — повторная обработка." vertex="1">
+          <mxGeometry height="145" width="260" x="3699.918367346939" y="2171.0408163265306" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-260" parent="1" style="shape=ellipse;html=1;fillColor=#08427b;strokeColor=#06315b;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="44" width="44" x="3807.918367346939" y="2139.0408163265306" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-261" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=13;fontColor=#ffffff;fillColor=#08427b;strokeColor=#06315b;strokeWidth=1.5;spacing=10;shadow=0;" value="&lt;b&gt;Бизнес-аналитик&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;[Person]&lt;/font&gt;&lt;br&gt;&lt;br&gt;Получает сводные отчёты,&lt;br&gt;не исходные персональные данные." vertex="1">
+          <mxGeometry height="110" width="220" x="2284.918367346939" y="2546.0408163265306" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-262" parent="1" style="shape=ellipse;html=1;fillColor=#08427b;strokeColor=#06315b;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="44" width="44" x="2372.918367346939" y="2514.0408163265306" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-263" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=13;fontColor=#263445;fillColor=#f1f5f9;strokeColor=#94a3b8;strokeWidth=1.5;spacing=10;shadow=0;" value="&lt;b&gt;Мониторинг и аудит&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;[Software System · внешний]&lt;/font&gt;&lt;br&gt;&lt;br&gt;Victoria Metrics/vmalert&lt;br&gt;и защищённый журнал действий.&lt;br&gt;Метрики качества, очередь, ошибки;&lt;br&gt;без содержимого ПДн и секретов." vertex="1">
+          <mxGeometry height="160" width="260" x="3699.918367346939" y="2496.0408163265306" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-264" parent="1" style="rounded=1;arcSize=6;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=13;fontColor=#334155;spacing=12;strokeColor=#cbd5e1;fillColor=#f8fafc;" value="&lt;b&gt;Как оценивать качество и улучшать классификацию&lt;/b&gt;&lt;br&gt;&lt;br&gt;• На отдельной выборке с ручной разметкой считать precision, recall и F1 по каждому классу. Особенно важен recall медданных: сколько чувствительных данных не пропущено.&lt;br&gt;• Precision — доля верных тегов; F1 — баланс точности и полноты. Низкий recall → дополнить правила/NER; низкий precision → уменьшить ложные срабатывания. Изменения проверять на отложенной выборке.&lt;br&gt;• Контролировать строки/мин, p95 обработки, возраст очереди, долю карантина и новых схем. Рост очереди → добавить воркеры; рост карантина → проверить источники и схемы." vertex="1">
+          <mxGeometry height="250" width="820" x="2289.918367346939" y="2756.0408163265306" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-265" parent="1" style="rounded=1;arcSize=6;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=13;fontColor=#334155;spacing=12;strokeColor=#cbd5e1;fillColor=#f8fafc;" value="&lt;b&gt;Изменения схем и масштабирование&lt;/b&gt;&lt;br&gt;&lt;br&gt;• Сравнивать имена, типы и вложенные поля с версией схемы. Новые/изменённые поля блокируют публикацию до согласования и повторной классификации.&lt;br&gt;• Воркеры без состояния: больше пакетов → больше параллельных воркеров; ограничивать размер пакета и число подключений к хранилищу.&lt;br&gt;• ID/хэш пакета защищают от повторов; результат пакета публикуется транзакционно. В карантине данные недоступны аналитикам.&lt;br&gt;• Больше пользователей → реплики для чтения и кэш агрегатов; партиции по дате/источнику. Правила доступа и сроки действуют во всех слоях." vertex="1">
+          <mxGeometry height="250" width="830" x="3149.918367346939" y="2756.0408163265306" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-266" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=#334155;spacing=0;strokeColor=none;fillColor=none;" value="Все сетевые соединения защищены TLS (файловый вход — SMB 3 с шифрованием). Буфер — временная закрытая зона, не аналитическое хранилище. Каталог описывает правила; применяют их воркеры, БД и API." vertex="1">
+          <mxGeometry height="30" width="1690" x="2289.918367346939" y="3016.0408163265306" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-267" edge="1" parent="1" source="cNN2-tNvkCbSF2pZAFen-251" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;strokeColor=#52677a;exitX=1;exitY=0.5;entryX=0;entryY=0.6;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="cNN2-tNvkCbSF2pZAFen-252">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-268" connectable="0" parent="cNN2-tNvkCbSF2pZAFen-267" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontColor=#263445;labelBackgroundColor=#ffffff;spacing=3;" value="Пакет данных&lt;br&gt;[TLS / SMB 3]" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-2.5" y="-25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-269" edge="1" parent="1" source="cNN2-tNvkCbSF2pZAFen-252" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;strokeColor=#52677a;exitX=1;exitY=0.45;entryX=0;entryY=0.47;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="cNN2-tNvkCbSF2pZAFen-253">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2879.9" y="1991.2" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-270" connectable="0" parent="cNN2-tNvkCbSF2pZAFen-269" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontColor=#263445;labelBackgroundColor=#ffffff;spacing=3;" value="Исходник&lt;br&gt;[S3/TLS]" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-23.85" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-271" edge="1" parent="1" source="cNN2-tNvkCbSF2pZAFen-252" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;strokeColor=#52677a;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="cNN2-tNvkCbSF2pZAFen-254">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-272" connectable="0" parent="cNN2-tNvkCbSF2pZAFen-271" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontColor=#263445;labelBackgroundColor=#ffffff;spacing=3;" value="ID пакета&lt;br&gt;[SQL/TLS]" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="70" y="-2.5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-273" edge="1" parent="1" source="cNN2-tNvkCbSF2pZAFen-255" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;strokeColor=#52677a;exitX=0;exitY=0.5;entryX=1;entryY=0.79;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="cNN2-tNvkCbSF2pZAFen-254">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-274" connectable="0" parent="cNN2-tNvkCbSF2pZAFen-273" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontColor=#263445;labelBackgroundColor=#ffffff;spacing=3;" value="Берёт задание&lt;br&gt;[SQL/TLS]" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-25.3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-275" edge="1" parent="1" source="cNN2-tNvkCbSF2pZAFen-255" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;strokeColor=#52677a;exitX=0.5;exitY=0;entryX=0.5;entryY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="cNN2-tNvkCbSF2pZAFen-253">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-276" connectable="0" parent="cNN2-tNvkCbSF2pZAFen-275" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontColor=#263445;labelBackgroundColor=#ffffff;spacing=3;" value="Чтение / карантин&lt;br&gt;[S3/TLS]" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="70" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-277" edge="1" parent="1" source="cNN2-tNvkCbSF2pZAFen-255" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;strokeColor=#52677a;exitX=1;exitY=0.65;entryX=0;entryY=0.45;exitDx=0;exitDy=0;entryDx=0;entryDy=0;curved=0;" target="cNN2-tNvkCbSF2pZAFen-256">
+          <mxGeometry relative="1" x="0.0083" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-278" connectable="0" parent="cNN2-tNvkCbSF2pZAFen-277" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontColor=#263445;labelBackgroundColor=#ffffff;spacing=3;" value="Проверенный&lt;br&gt;пакет&lt;br&gt;[SQL/TLS]" vertex="1">
+          <mxGeometry relative="1" x="0.0083" as="geometry">
+            <mxPoint y="-38.5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-279" edge="1" parent="1" source="cNN2-tNvkCbSF2pZAFen-255" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;strokeColor=#52677a;exitX=1;exitY=0.2;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;curved=0;" target="cNN2-tNvkCbSF2pZAFen-258">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3329.918367346939" y="2220.0408163265306" />
+              <mxPoint x="3329.918367346939" y="1991.0408163265306" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-280" connectable="0" parent="cNN2-tNvkCbSF2pZAFen-279" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontColor=#263445;labelBackgroundColor=#ffffff;spacing=3;" value="Читает правила; пишет&lt;br&gt;теги и lineage [HTTPS]" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="154.5" y="-25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-281" edge="1" parent="1" source="cNN2-tNvkCbSF2pZAFen-259" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;strokeColor=#52677a;exitX=1;exitY=0.3;entryX=1;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="cNN2-tNvkCbSF2pZAFen-258">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3979.918367346939" y="2214.5408163265306" />
+              <mxPoint x="3979.918367346939" y="1991.0408163265306" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-282" connectable="0" parent="cNN2-tNvkCbSF2pZAFen-281" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontColor=#263445;labelBackgroundColor=#ffffff;spacing=3;" value="Схемы и правила&lt;br&gt;[HTTPS]" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-70" y="8.25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-283" edge="1" parent="1" source="cNN2-tNvkCbSF2pZAFen-259" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;strokeColor=#52677a;exitX=0;exitY=0.2;entryX=1;entryY=0.8;exitDx=0;exitDy=0;entryDx=0;entryDy=0;curved=0;" target="cNN2-tNvkCbSF2pZAFen-253">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3689.9" y="2200" />
+              <mxPoint x="3689.9" y="2116" />
+              <mxPoint x="3420" y="2116" />
+              <mxPoint x="3420" y="2044" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-284" connectable="0" parent="cNN2-tNvkCbSF2pZAFen-283" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontColor=#263445;labelBackgroundColor=#ffffff;spacing=3;" value="Разбор карантина&lt;br&gt;[HTTPS]" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="34" y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-285" edge="1" parent="1" source="cNN2-tNvkCbSF2pZAFen-259" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;strokeColor=#52677a;exitX=0;exitY=0.8;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;curved=0;" target="cNN2-tNvkCbSF2pZAFen-252">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3679.918367346939" y="2287.0408163265306" />
+              <mxPoint x="3679.918367346939" y="1896.0408163265306" />
+              <mxPoint x="2739.918367346939" y="1896.0408163265306" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-286" connectable="0" parent="cNN2-tNvkCbSF2pZAFen-285" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontColor=#263445;labelBackgroundColor=#ffffff;spacing=3;" value="Повтор пакета после&lt;br&gt;одобрения [HTTPS]" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="107" y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-287" edge="1" parent="1" source="cNN2-tNvkCbSF2pZAFen-255" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;strokeColor=#52677a;exitX=1;exitY=0.9;entryX=0;entryY=0.25;exitDx=0;exitDy=0;entryDx=0;entryDy=0;curved=0;" target="cNN2-tNvkCbSF2pZAFen-263">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3309.918367346939" y="2374.0408163265306" />
+              <mxPoint x="3309.918367346939" y="2536.0408163265306" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-288" connectable="0" parent="cNN2-tNvkCbSF2pZAFen-287" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontColor=#263445;labelBackgroundColor=#ffffff;spacing=3;" value="Качество, версии,&lt;br&gt;ошибки и решения [TLS]" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="101" y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-289" edge="1" parent="1" source="cNN2-tNvkCbSF2pZAFen-261" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;strokeColor=#52677a;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="cNN2-tNvkCbSF2pZAFen-257">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-290" connectable="0" parent="cNN2-tNvkCbSF2pZAFen-289" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontColor=#263445;labelBackgroundColor=#ffffff;spacing=3;" value="Отчёты&lt;br&gt;[HTTPS]" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-2.5" y="-25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-291" edge="1" parent="1" source="cNN2-tNvkCbSF2pZAFen-257" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;strokeColor=#52677a;exitX=1;exitY=0.5;entryX=0;entryY=0.7;exitDx=0;exitDy=0;entryDx=0;entryDy=0;curved=0;" target="cNN2-tNvkCbSF2pZAFen-256">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3349.918367346939" y="2601.0408163265306" />
+              <mxPoint x="3349.918367346939" y="2400.0408163265306" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNN2-tNvkCbSF2pZAFen-292" connectable="0" parent="cNN2-tNvkCbSF2pZAFen-291" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontColor=#263445;labelBackgroundColor=#ffffff;spacing=3;" value="Только marts&lt;br&gt;[SQL/TLS]" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="119.5" y="-25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
